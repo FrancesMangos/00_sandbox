@@ -1,16 +1,18 @@
-# This is a sample Python script.
+print("Welcome to Slice My Pizza!")
+print()
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+try:
+    pizza_slices = (int(input("How many slices are on your pizza?")))
+    print()
 
+try:
+    amount_people = (int(input("How many people are sharing this pizza?")))
+    print()
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+slices_each = pizza_slices/amount_people
 
+slices_remaining = pizza_slices%amount_people
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+print("Each person will get {} slices of pizza each".format(slices_each))
+print()
+print("There will be {} slices of pizza remaining".format(slices_remaining))
