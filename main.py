@@ -1,17 +1,26 @@
 print("Welcome to Slice My Pizza!")
 print()
 
-try:
-    pizza_slices = (int(input("How many slices are on your pizza?")))
-    print()
 
-try:
-    amount_people = (int(input("How many people are sharing this pizza?")))
-    print()
+while True:
+    try:
+        pizza_slices = int(input("How many slices are in your pizza?"))
+    except ValueError:
+            print("Please enter a valid number")
+    continue
 
-slices_each = pizza_slices/amount_people
+if pizza_slices > 0:
+    while True:
+        try:
+            amount_people = int(input("How many people are sharing your pizza?"))
+        except ValueError:
+            print("Please enter a valid number")
 
-slices_remaining = pizza_slices%amount_people
+if amount_people > 0:
+
+    slices_each = pizza_slices//amount_people
+
+    slices_remaining = pizza_slices%amount_people
 
 print("Each person will get {} slices of pizza each".format(slices_each))
 print()
