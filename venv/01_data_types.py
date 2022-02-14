@@ -6,7 +6,7 @@ while start == True:
     try:
         name = str(input("What is your name?"))
         print()
-        if name.isdigit() or name.isdecimal():
+        if name.isdigit() or name.isdecimal() or name == "":
             print("Please enter a valid word")
         else:
             start = False
@@ -21,8 +21,11 @@ start = True
 while start == True:
     try:
         age = int(input("How old are you?"))
-        print()
-        start = False
+        if age == "":
+            print("Please enter a valid number")
+        else:
+            print()
+            start = False
 
     except ValueError:
         print("Please enter a valid number")
@@ -32,7 +35,7 @@ while start == True:
     try:
         fave_icecream = str(input("What is your favourite icecream flavour?"))
         print()
-        if fave_icecream.isdigit() or fave_icecream.isdecimal():
+        if fave_icecream.isdigit() or fave_icecream.isdecimal() or fave_icecream == "":
             print("Please enter a valid icecream flavour")
         else:
             start = False
@@ -46,7 +49,7 @@ while start == True:
     try:
         fave_animal = str(input("What is your favourite animal?"))
         print()
-        if fave_animal.isdigit() or fave_animal.isdecimal():
+        if fave_animal.isdigit() or fave_animal.isdecimal() or fave_animal == "":
             print("Please enter a valid animal")
         else:
             start = False
@@ -58,8 +61,11 @@ start = True
 while start == True:
     try:
         pi_guess = float(input("Try and name the first three decimals of Pi."))
-        print()
-        start = False
+        if pi_guess == "":
+             print("Please enter valid numbers")
+        else:
+            print()
+            start = False
     except ValueError:
         print("Please enter valid numbers")
 
@@ -73,7 +79,7 @@ print("Your favourite animal is a {}!".format(fave_animal))
 if pi_guess == 3.141:
     print("You said Pi to be 3.141 and you got it correct!")
 else:
-    print("You said Pi to be {} but Pi is actually 3.141, meaning you sadly got it incorrect.".format(pi_guess))
+    print("You said Pi to be {:.3f} but Pi is actually 3.141, meaning you sadly got it incorrect.".format(pi_guess))
 
 
 
