@@ -1,7 +1,7 @@
 print("Welcome to Vegetable Guess!")
 print()
 print("Choose a vegetable as your choice and we will try and guess it!")
-print("Carrot, Peas, Broccoli, Sweetcorn")
+print("Choose between: Carrot, Peas, Broccoli, Sweetcorn")
 print()
 
 guess_one = input("Is your vegetable green? Y/N").lower()
