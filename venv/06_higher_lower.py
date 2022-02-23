@@ -1,5 +1,5 @@
 from random import randint
-correct_number = randint(1, 11)
+correct_number = randint(1, 10)
 
 start = True
 guesses_amount = 0
