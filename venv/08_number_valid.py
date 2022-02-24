@@ -9,4 +9,3 @@ while not_validated == True:
             print("Number entered out of range")
     except ValueError:
         print("You must enter a number between 1 and 10")
-
