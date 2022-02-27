@@ -5,17 +5,59 @@ print("Welcome to Slice My Pizza 2: Electric Boogaloo!")
 print("This time we won't slice your pizza though :D")
 print()
 
-crust = input("Thick Crust or Thin Crust?").lower()
-print()
+start = True
+while start == True:
+    try:
+        crust = input(str("Thick Crust or Thin Crust?")).lower()
+        print()
+        if crust == "thick" or crust == "thin":
+            start = False
+        else:
+            print("Please enter a valid crust thickness")
 
-pizza_size= int(input("How large would you like your pizza to be? 8, 10, 12, 14, 18. Sizes are in inches"))
-print()
+    except ValueError:
+        print("Please enter either thin or thick")
 
-cheese = input("Do you want Cheese? Y/N").lower()
-print()
+start = True
+while start == True:
+    try:
+        pizza_size= int(input("How large would you like your pizza to be? 8, 10, 12, 14, 18. Sizes are in inches"))
+        print()
+        if pizza_size == 8 or pizza_size == 10 or pizza_size == 12 or pizza_size == 14 or pizza_size == 18:
+            start = False
+        else:
+            print("Not a valid pizza size")
+    except ValueError:
+        print("Please enter a pizza size")
 
-pizza_type = input("Which type of pizza would you like? Margarita, Vegetable, Vegan, Hawaiian, or Meat Feast?")
-print()
+start = True
+while start == True:
+    try:
+        cheese = input(str("Do you want Cheese? Y/N")).lower()
+        print()
+        if cheese == "yes" or cheese == "y" or cheese == "no" or cheese == "n":
+            start = False
+        else:
+            print("Please enter yes or no")
+
+    except ValueError:
+        print("Please enter yes or no")
+
+start = True
+while start == True:
+    try:
+        pizza_type = input(str("Which type of pizza would you like? Margarita, Vegetable, Vegan, Hawaiian, or Meat Feast?")).lower()
+        print()
+        if pizza_type.isdigit() or pizza_type.isdecimal():
+            print("Please enter a valid pizza type")
+        else:
+            if pizza_type == "margarita" or pizza_type == "vegetable" or pizza_type == "vegan" or pizza_type == "hawaiian" or pizza_type == "meat feast":
+                start = False
+            else:
+                print("Not valid pizza type")
+
+    except ValueError:
+        print("Please enter a valid pizza type")
 
 if crust != "thin crust":
     total_cost = 8.00
