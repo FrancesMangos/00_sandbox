@@ -1,8 +1,5 @@
 answer = 0
-
 print("Welcome to the Times Table Quiz")
-
-
 start = False
 while not start:
     try:
@@ -11,7 +8,6 @@ while not start:
         start = True
     except ValueError:
         print("Please enter a number!")
-
 start = False
 while not start:
     try:
